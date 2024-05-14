@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+void generateStrings(const vector<char>& characters) {
+    int n = characters.size();
+    for (char i : characters) {
+        for (char j : characters) {
+            for (char k : characters) {
+                string str;
+                str += i;
+                str += j;
+                str += k;
+                cout << str << endl;
+            }
+        }
+    }
+}
+
+int main() {
+    vector<char> characters = {'a', 'b', 'c', 'd'};
+    generateStrings(characters);
+    return 0;
+}
